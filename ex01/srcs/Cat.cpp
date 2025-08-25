@@ -6,11 +6,12 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 14:05:01 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/25 14:19:36 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+#include "Brain.hpp"
 
 Cat::Cat(void)
 {
@@ -24,7 +25,7 @@ Cat::Cat(void)
 
 Cat::Cat(Cat &copy)
 {
-	this->_brain = new Brain();
+	this->_brain = new Brain(*copy._brain);
 	_type = copy._type;
 	std::cout << "[🔧]"
 		<< "Cat " << this->_type
@@ -46,7 +47,7 @@ Cat		Cat::operator=(Cat &rhs)
 	if (this == &rhs)
 		return (*this);
 	delete this->_brain;
-	this->_brain = rhs._brain;
+	this->_brain = new Brain(*rhs._brain);
 	this->_type = rhs._type;
 	return (*this);
 }
