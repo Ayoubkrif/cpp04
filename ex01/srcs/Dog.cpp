@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 13:12:47 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/25 14:06:14 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Dog::Dog(void)
 {
+	this->_brain = new Brain();
 	_type = "Dog";
 	std::cout << "[🔧]"
 		<< "Dog " << this->_type
@@ -23,6 +24,7 @@ Dog::Dog(void)
 
 Dog::Dog(Dog &copy)
 {
+	this->_brain = new Brain();
 	_type = copy._type;
 	std::cout << "[🔧]"
 		<< "Dog " << this->_type
@@ -32,6 +34,7 @@ Dog::Dog(Dog &copy)
 
 Dog::~Dog(void)
 {
+	delete this->_brain;
 	std::cout << "[💥]"
 		<< "Dog " << this->_type
 		<< " has been destroyed !"
@@ -40,6 +43,10 @@ Dog::~Dog(void)
 
 Dog		Dog::operator=(Dog &rhs)
 {
+	if (this == &rhs)
+		return (*this);
+	delete this->_brain;
+	this->_brain = rhs._brain;
 	this->_type = rhs._type;
 	return (*this);
 }
