@@ -1,53 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 13:12:47 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/25 13:12:41 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog(void)
+Cat::Cat(void)
 {
-	_type = "Dog";
+	_type = "Cat";
 	std::cout << "[🔧]"
-		<< "Dog " << this->_type
+		<< "Cat " << this->_type
 		<< " has been created (default) !"
 		<< std::endl;
 }
 
-Dog::Dog(Dog &copy)
+Cat::Cat(Cat &copy)
 {
 	_type = copy._type;
 	std::cout << "[🔧]"
-		<< "Dog " << this->_type
+		<< "Cat " << this->_type
 		<< " has been created (copy) !"
 		<< std::endl;
 }
 
-Dog::~Dog(void)
+Cat::~Cat(void)
 {
 	std::cout << "[💥]"
-		<< "Dog " << this->_type
+		<< "Cat " << this->_type
 		<< " has been destroyed !"
 		<< std::endl;
 }
 
-Dog		Dog::operator=(Dog &rhs)
+Cat		Cat::operator=(Cat &rhs)
 {
 	this->_type = rhs._type;
 	return (*this);
 }
 
-void		Dog::makeSound(void)
+void		Cat::makeSound(void)
 {
 	std::cout << "[🔊]"
 		<< this->_type
-		<< ": Woof !" 
+		<< ": Meow !" 
 		<< std::endl;
 }
