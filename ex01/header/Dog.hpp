@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:38:16 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 12:44:27 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/25 14:00:57 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class	Dog: public Animal
 {
@@ -25,4 +26,6 @@ class	Dog: public Animal
 
 		void		makeSound(void);
 
+	private:
+		Brain	*_brain;
 };
