@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 13:12:47 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 13:12:13 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@ Dog::~Dog(void)
 		<< std::endl;
 }
 
-Dog		Dog::operator=(Dog &rhs)
+Dog		Dog::operator=(Dog const &rhs)
 {
 	this->_type = rhs._type;
 	return (*this);
 }
 
-void		Dog::makeSound(void)
+void		Dog::makeSound(void) const
 {
 	std::cout << "[🔊]"
 		<< this->_type
