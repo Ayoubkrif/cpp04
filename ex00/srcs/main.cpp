@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 13:08:35 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 13:12:08 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 11:42:58 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,15 @@
 
 int	main(void)
 {
-	{
-		Dog		Arcanin;
+	const Animal* meta = new Animal();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
 
-		Arcanin.makeSound();
-	}
-	{
-		Cat		Miaouss;
-
-		Miaouss.makeSound();
-	}
-	{
-		Animal	Metamorph;
-
-		Metamorph.makeSound();
-	}
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	std::cout << j->getType() << " " << std::endl;
+	j->makeSound();
+	std::cout << meta->getType() << " " << std::endl;
+	meta->makeSound();
 	return (0);
 }

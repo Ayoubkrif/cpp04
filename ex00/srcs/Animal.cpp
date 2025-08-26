@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 13:12:56 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 12:51:38 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,21 @@ Animal::~Animal(void)
 		<< std::endl;
 }
 
-Animal		Animal::operator=(Animal &rhs)
+Animal		Animal::operator=(Animal  const &rhs)
 {
 	this->_type = rhs._type;
 	return (*this);
 }
 
-void		Animal::makeSound(void)
+void		Animal::makeSound(void) const
 {
 	std::cout << "[🔊]"
 		<< this->_type
 		<< ": ???..." 
 		<< std::endl;
+}
+
+std::string const	Animal::getType(void) const
+{
+	return (this->_type);
 }

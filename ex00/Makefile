@@ -6,7 +6,7 @@
 #    By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 20:52:04 by aykrifa           #+#    #+#              #
-#    Updated: 2025/08/25 13:13:09 by aykrifa          ###   ########.fr        #
+#    Updated: 2025/08/26 10:32:12 by aykrifa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SOURCES		= main.cpp \
 
 SRCS		= $(addprefix $(SRC_PATH)/,$(SOURCES))
 OBJS		= $(addprefix $(OBJ_PATH)/,$(SOURCES:.cpp=.o))
-DEPS		= $(addprefix $(OBJ_PATH)/,$(OBJS:.o=.d))
+DEPS		= $(OBJS:.o=.d)
 
 all: $(OBJ_PATH) $(NAME) 
 
