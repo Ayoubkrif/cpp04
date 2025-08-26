@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 13:39:47 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 13:52:23 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 12:54:58 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class	Brain
 		Brain(void);
 		Brain(Brain &copy);
 		~Brain(void);
-		Brain			operator=(Brain &rhs);
+		Brain			operator=(Brain const &rhs);
 
 		std::string		ideas[100];
 

@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:38:16 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 13:07:34 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 12:59:51 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ class	Animal
 		Animal(void);
 		/*Animal(std::string type);*/
 		Animal(Animal &copy);
-		~Animal(void);
-		Animal		operator=(Animal &rhs);
+		virtual ~Animal(void);
+		Animal		operator=(Animal const &rhs);
 
-		void		makeSound(void);
+		void		virtual makeSound(void) const;
+
+		std::string const	getType(void) const;
 
 	protected:
 		std::string	_type;

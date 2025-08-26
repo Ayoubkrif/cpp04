@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 14:12:29 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 12:57:06 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,12 @@ Brain::~Brain(void)
 		<< std::endl;
 }
 
-Brain		Brain::operator=(Brain &rhs)
+Brain		Brain::operator=(Brain const &rhs)
 {
+	std::cout << "Assignement Brain"
+		<< std::endl;
+	for (int i = 0; i < 100; i++)
+		this->ideas[i] = rhs.ideas[i];
 	(void)rhs;
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:38:16 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 14:00:57 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 13:01:57 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class	Dog: public Animal
 		Dog(void);
 		Dog(Dog &copy);
 		~Dog(void);
-		Dog		operator=(Dog &rhs);
+		Dog		operator=(Dog const &rhs);
 
-		void		makeSound(void);
+		void		makeSound(void) const;
 
 	private:
 		Brain	*_brain;

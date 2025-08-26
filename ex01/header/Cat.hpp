@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:38:16 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 13:57:57 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 13:02:04 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class	Cat: public Animal
 		Cat(void);
 		Cat(Cat &copy);
 		~Cat(void);
-		Cat		operator=(Cat &rhs);
+		Cat		operator=(Cat const &rhs);
 
-		void		makeSound(void);
+		void		makeSound(void) const;
 
 	private:
 		Brain	*_brain;

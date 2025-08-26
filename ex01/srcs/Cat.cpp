@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/25 14:19:36 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/26 13:02:10 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,10 @@ Cat::~Cat(void)
 		<< std::endl;
 }
 
-Cat		Cat::operator=(Cat &rhs)
+Cat		Cat::operator=(Cat const &rhs)
 {
+	std::cout << "Assignement Cat"
+		<< std::endl;
 	if (this == &rhs)
 		return (*this);
 	delete this->_brain;
@@ -52,7 +54,7 @@ Cat		Cat::operator=(Cat &rhs)
 	return (*this);
 }
 
-void		Cat::makeSound(void)
+void		Cat::makeSound(void) const
 {
 	std::cout << "[🔊]"
 		<< this->_type
