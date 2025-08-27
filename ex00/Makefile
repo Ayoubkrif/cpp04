@@ -6,7 +6,7 @@
 #    By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 20:52:04 by aykrifa           #+#    #+#              #
-#    Updated: 2025/08/26 10:32:12 by aykrifa          ###   ########.fr        #
+#    Updated: 2025/08/27 11:26:37 by aykrifa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,8 @@ SOURCES		= main.cpp \
 			  Animal.cpp \
 			  Cat.cpp \
 			  Dog.cpp \
+			  WrongAnimal.cpp \
+			  WrongCat.cpp \
 
 SRCS		= $(addprefix $(SRC_PATH)/,$(SOURCES))
 OBJS		= $(addprefix $(OBJ_PATH)/,$(SOURCES:.cpp=.o))
