@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:38:16 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/27 11:29:33 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/27 11:45:19 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class	WrongAnimal
 		/*WrongAnimal(std::string type);*/
 		WrongAnimal(WrongAnimal &copy);
 		~WrongAnimal(void);
-		WrongAnimal				operator=(WrongAnimal const &rhs);
-		std::string const	getType(void) const;
+		WrongAnimal				&operator=(WrongAnimal const &rhs);
+		std::string const		getType(void) const;
 
-		void		makeSound(void) const;
+		void					makeSound(void) const;
 
 	protected:
 		std::string	_type;

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/27 11:25:40 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/27 11:47:12 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ WrongCat::~WrongCat(void)
 		<< std::endl;
 }
 
-WrongCat		WrongCat::operator=(WrongCat const &rhs)
+WrongCat		&WrongCat::operator=(WrongCat const &rhs)
 {
 	this->_type = rhs._type;
 	return (*this);

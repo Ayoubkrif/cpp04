@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/27 11:26:09 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/27 11:46:31 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Animal::~Animal(void)
 		<< std::endl;
 }
 
-Animal		Animal::operator=(Animal  const &rhs)
+Animal		&Animal::operator=(Animal  const &rhs)
 {
 	this->_type = rhs._type;
 	return (*this);
