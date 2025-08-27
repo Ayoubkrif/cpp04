@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 13:08:35 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/26 11:42:58 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/27 11:18:21 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,8 @@ int	main(void)
 	j->makeSound();
 	std::cout << meta->getType() << " " << std::endl;
 	meta->makeSound();
+	delete meta;
+	delete j;
+	delete i;
 	return (0);
 }
