@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 12:45:11 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/26 13:02:23 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/27 11:48:26 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Dog::~Dog(void)
 		<< std::endl;
 }
 
-Dog		Dog::operator=(Dog const &rhs)
+Dog		&Dog::operator=(Dog const &rhs)
 {
 	std::cout << "Assignement animal"
 		<< std::endl;
