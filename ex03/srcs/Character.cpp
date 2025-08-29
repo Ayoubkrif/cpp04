@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:52:27 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/29 15:19:14 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/29 23:40:35 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ Character::~Character(void)
 
 Character			&Character::operator=(Character const &rhs)
 {
+	(void)rhs;
 	std::cout << "[🟰]"
 		<< "Character assignation !"
 		<< std::endl;
