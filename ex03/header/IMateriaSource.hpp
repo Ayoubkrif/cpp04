@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 12:22:23 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 03:48:27 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 06:59:07 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 class IMateriaSource
 {
 	public:
-	virtual				~IMateriaSource();
-	virtual void		learnMateria(AMateria*) = 0;
-	virtual AMateria	*createMateria(std::string const & type) = 0;
+							IMateriaSource(void);
+							IMateriaSource(IMateriaSource const &copy);
+		virtual				~IMateriaSource();
+
+		IMateriaSource		&operator=(IMateriaSource const &rhs);
+		virtual void		learnMateria(AMateria*) = 0;
+		virtual AMateria	*createMateria(std::string const & type) = 0;
 };
