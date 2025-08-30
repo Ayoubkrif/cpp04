@@ -6,12 +6,12 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:52:27 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/29 14:52:12 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 00:23:41 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "CureMateria.hpp"
-#include "ICharacter.hpp"
+#include "Character.hpp"
 
 CureMateria::CureMateria(void)	:	AMateria("cure")
 {
@@ -50,7 +50,7 @@ CureMateria			*CureMateria::clone() const
 	return (new CureMateria());
 }
 
-void				use(ICharacter &target)
+void				CureMateria::use(ICharacter &target)
 {
 	std::cout << "[💗]"
 		<< "* heal "

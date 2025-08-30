@@ -6,12 +6,12 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:52:27 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/29 14:52:07 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 00:23:57 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "IceMateria.hpp"
-#include "ICharacter.hpp"
+#include "Character.hpp"
 
 IceMateria::IceMateria(void)	:	AMateria("ice")
 {
@@ -50,7 +50,7 @@ IceMateria			*IceMateria::clone() const
 	return (new IceMateria());
 }
 
-void				use(ICharacter &target)
+void				IceMateria::use(ICharacter &target)
 {
 	std::cout << "[🥶]"
 		<< "* shoots an ice bolt at "
