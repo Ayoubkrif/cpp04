@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 12:01:20 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 07:05:48 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 11:23:53 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 class Cure :	public AMateria
 {
 	public:
-		Cure(void);
-		Cure(Cure const &copy);
-		~Cure(void);
+					Cure(void);
+					Cure(Cure const &copy);
+					~Cure(void);
 
 		Cure		&operator=(Cure const &rhs);
 		Cure		*clone() const;
-		void			use(ICharacter& target);
+		void		use(ICharacter& target);
 
 	protected:
 		std::string		type;

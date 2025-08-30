@@ -6,9 +6,11 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 12:22:23 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 08:32:54 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 11:22:01 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include "AMateria.hpp"
 
