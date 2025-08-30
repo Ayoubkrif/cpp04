@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:24:51 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/29 15:14:35 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/29 23:59:22 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ class Character :	public ICharacter
 		void			use(int idx, ICharacter& target);
 	private:
 		std::string		_name;
+		AMateria		*_inventory[4];
 };
