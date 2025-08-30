@@ -6,16 +6,15 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:52:27 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 05:28:59 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 08:41:59 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 #include "AMateria.hpp"
 
-Character::Character(void)	:	_name("Random Character")
+Character::Character(void)	:	_name("Random Character"), _inventory()
 {
-	init_Materia_array(this->_inventory, 4);
 	std::cout << "[🔧]"
 		<< "Character "
 		<< _name
@@ -23,9 +22,8 @@ Character::Character(void)	:	_name("Random Character")
 		<< std::endl;
 }
 
-Character::Character(std::string const &name)	:_name(name)
+Character::Character(std::string const &name)	:_name(name), _inventory()
 {
-	init_Materia_array(this->_inventory, 4);
 	std::cout << "[🔧]"
 		<< "Character "
 		<< _name
@@ -33,9 +31,8 @@ Character::Character(std::string const &name)	:_name(name)
 		<< std::endl;
 }
 
-Character::Character(Character const &c)	: _name(c._name)
+Character::Character(Character const &c)	: _name(c._name), _inventory()
 {
-	init_Materia_array(this->_inventory, 4);
 	std::cout << "[🔧]"
 		<< "Character "
 		<< _name
@@ -72,19 +69,28 @@ std::string const	&Character::getName() const
 
 void				Character::equip(AMateria* m)
 {
+	if (!m)
+		return ;
 	std::cout << "[🫴]"
 		<< this->_name
 		<< " try to equip a Materia"
 		<< std::endl;
 	for (int i = 0; i < 4; i++)
 	{
+		if (this->_inventory[i] == m)
+		{
+			std::cout << "[❌]"
+				<< "Can't equip: already in inventory !"
+				<< std::endl;
+			return ;
+		}
 		if (!this->_inventory[i])
 		{
 			this->_inventory[i] = m;
 			std::cout << "[✅]"
 				<< "Materia added to inventory"
 				<< std::endl;
-			break ;
+			return ;
 		}
 	}
 	std::cout << "[❌]"

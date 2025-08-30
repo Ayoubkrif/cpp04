@@ -6,21 +6,20 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:51:55 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 05:49:52 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 08:29:12 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
-MateriaSource::MateriaSource(void)
+MateriaSource::MateriaSource(void) : _inventory()
 {
-	init_Materia_array(this->_inventory, 4);
 	std::cout << "[🔧]"
 		<< "Materia Source has been created (default) !"
 		<< std::endl;
 }
 
-MateriaSource::MateriaSource(MateriaSource const &copy)// copie flat
+MateriaSource::MateriaSource(MateriaSource const &copy)
 {
 	copy_Materia_array(this->_inventory, copy._inventory, 4);
 	std::cout << "[🔧]"
