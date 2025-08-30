@@ -6,7 +6,7 @@
 #    By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/14 20:52:04 by aykrifa           #+#    #+#              #
-#    Updated: 2025/08/29 23:39:46 by aykrifa          ###   ########.fr        #
+#    Updated: 2025/08/30 05:50:43 by aykrifa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,10 @@ SRC_DIRS	=
 SRC_DIRS_PATHS = $(addprefix $(SRC_PATH)/,$(SRC_DIRS))
 
 SOURCES		= main.cpp \
-			  IceMateria.cpp \
-			  CureMateria.cpp \
+			  Ice.cpp \
+			  Cure.cpp \
 			  Character.cpp \
+			  MateriaSource.cpp \
 			  AMateria.cpp
 
 SRCS		= $(addprefix $(SRC_PATH)/,$(SOURCES))

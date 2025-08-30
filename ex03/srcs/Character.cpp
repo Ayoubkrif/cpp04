@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:52:27 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 04:09:46 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 05:28:59 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,16 @@ Character::Character(void)	:	_name("Random Character")
 		<< "Character "
 		<< _name
 		<< " has been created (default) !"
+		<< std::endl;
+}
+
+Character::Character(std::string const &name)	:_name(name)
+{
+	init_Materia_array(this->_inventory, 4);
+	std::cout << "[🔧]"
+		<< "Character "
+		<< _name
+		<< " has been created (parameter) !"
 		<< std::endl;
 }
 
@@ -45,6 +55,8 @@ Character::~Character(void)
 
 Character			&Character::operator=(Character const &rhs)
 {
+	if (this == &rhs)
+		return (*this);
 	delete_Materia_array(this->_inventory, 4);
 	copy_Materia_array(this->_inventory, rhs._inventory, 4);
 	std::cout << "[🟰]"

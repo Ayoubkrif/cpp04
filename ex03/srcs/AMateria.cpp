@@ -6,12 +6,11 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:51:55 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 04:08:05 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 05:49:23 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include "IceMateria.hpp"
 
 AMateria::AMateria(void)
 {

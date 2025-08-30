@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:24:51 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/29 23:59:22 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 05:28:09 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ class Character :	public ICharacter
 	public:
 		Character(void);
 		Character(Character const &rhs);
+		Character(std::string const &name);
 		~Character(void);
 
 		Character		&operator=(Character const &rhs);
