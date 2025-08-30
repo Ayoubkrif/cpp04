@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:52:27 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 05:49:11 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 07:05:44 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ Cure::~Cure(void)
 {
 	std::cout << "[💥]"
 		<< "Cure Materia "
-		<< this->_type
 		<< " has been destroyed !"
 		<< std::endl;
 }
@@ -50,11 +49,11 @@ Cure			*Cure::clone() const
 	return (new Cure());
 }
 
-void				Cure::use(ICharacter &target)
-{
-	std::cout << "[💗]"
-		<< "* heal "
-		<< target.getName()
-		<< "'s wounds *"
-		<< std::endl;
-}
+/*void				Cure::use(ICharacter &target)*/
+/*{*/
+/*	std::cout << "[💗]"*/
+/*		<< "* heal "*/
+/*		<< target.getName()*/
+/*		<< "'s wounds *"*/
+/*		<< std::endl;*/
+/*}*/

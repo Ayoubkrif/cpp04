@@ -6,7 +6,7 @@
 /*   By: aykrifa <aykrifa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:52:27 by aykrifa           #+#    #+#             */
-/*   Updated: 2025/08/30 05:49:38 by aykrifa          ###   ########.fr       */
+/*   Updated: 2025/08/30 07:04:07 by aykrifa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ Ice::~Ice(void)
 {
 	std::cout << "[💥]"
 		<< "Ice Materia "
-		<< this->_type
 		<< " has been destroyed !"
 		<< std::endl;
 }
